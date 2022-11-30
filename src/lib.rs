@@ -120,6 +120,9 @@ mod asynch;
 #[cfg(feature = "async")]
 pub use asynch::*;
 
+#[cfg(feature = "buffered")]
+pub mod buffered;
+
 #[derive(Debug, Copy, Clone)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum TlsError {
